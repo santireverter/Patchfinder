@@ -331,6 +331,7 @@ body{
     height: 60rem;
     border-radius: 3rem;
     padding: 0.1rem;
+    /* git  */
 }
 .imgFlex2{
     grid-area: imgGrid2;
