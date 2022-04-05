@@ -1,0 +1,528 @@
+*{
+	border:0;
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+}
+html{
+    font-size: 10px;
+}
+body{
+    background-color: #11131a;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: antiquewhite;
+}
+/* -----------------------------------------------------------INDEX Y APEX---------------------------------------------------- */
+.navegacion{
+    background-color: #4672fe;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15rem;
+}
+.navegacion a{
+    text-decoration: none;
+}
+.logo{
+    width: 10rem;
+    height: 10rem;
+    margin: 0.5rem;
+}
+.menu li{
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+    font-size: large;
+    font-weight: bold;
+    margin: 0px 1rem;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+
+}
+.submenu{
+    display: none;
+    position: absolute;
+}
+.submenu li{
+    display: block;
+    background-color: rgb(140, 130, 180);
+    width: 20rem;
+    border: solid;
+    z-index: 2;
+}
+.menu li:hover .submenu{
+    display: block;
+}
+.bienvenida{
+    background-image: url(../imagenes/pathfinder-waving-recortada.jpg);
+    background-size: cover;
+    height: 50rem;
+    width: 108rem;
+}
+.redes img{
+    height: 3.5rem;
+    width: 3.5rem;
+    filter: grayscale(100%);
+}
+.redes img:hover{
+    filter: grayscale(0%);
+    transition: 1s;
+}
+.redes li{
+    display: inline;
+}
+.redes a{
+    text-decoration: none;
+}
+.al-inicio{
+    color: antiquewhite;
+    text-decoration: none;
+}
+.textoInterior{
+    color: antiquewhite;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.582);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    filter: none;
+}
+/*----------------------------------------------- FLEX CODE --------------------------------------------------------------*/
+.contenedorFlexBody{
+    display: flex;
+    flex-flow: column wrap;
+}
+.contenedorFlex{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3.5rem;
+    margin: 2rem;
+}
+.contenedorFlex div{
+    justify-content: center;
+}
+.imagenAnimada{
+    display: flex;
+}
+.imagenAnimada img{
+    width: auto;
+    height: 40rem;
+}
+.imagenAnimada img:hover{
+    width: auto*1.1;
+    height: 45rem;
+    filter: grayscale(70%);
+    transition: all 1s;
+}
+/*--------------------------------------------- GRID CODE------------------------------------------------------------*/
+.contenedorGrid{
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.4fr 0.8fr 2.3fr 0.5fr ;
+    grid-template-areas: 
+    "header header"
+    "titulo titulo"
+    "aside parches"
+    "footer footer"
+    ;
+    /* grid-gap: 10px; */
+    align-items: center;
+
+}
+.header{
+    grid-area: header;
+}
+.titulo{
+    grid-area: titulo;
+    background-image: url(../imagenes/pathfinder-waving-recortada.jpg);
+    background-size: cover;
+    height: 39rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.aside{
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+}
+.navInterno a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.navInterno li{
+    padding: 1.5rem;
+    margin: 2rem 0px;
+}
+.parches{
+    grid-area: parches;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-areas: 
+    "imagen1 notas1"
+    "imagen2 notas2"
+    "imagen3 notas3";
+    align-items: flex-start;
+    justify-items:flex-start;
+}
+.parches a{
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 20px;
+}
+.parches p{
+    margin: 2rem;
+}
+.notas1{
+    grid-area: notas1;
+    padding: 3rem;
+    height: 30rem;
+    width: 70rem;
+    display: flex;
+    align-items: center;
+}
+.notas2{
+    grid-area: notas2;
+    padding: 3rem;
+    height: 30rem;
+    width: 70rem;
+    display: flex;
+    align-items: center;
+}
+.notas3{
+    grid-area: notas3;
+    padding: 3rem;
+    height: 30rem;
+    width: 70rem;
+    display: flex;
+    align-items: center;
+}
+.imagen1{
+    grid-area: imagen1;
+    width: 40rem;
+    height: 25rem;
+    border-radius: 10px;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.imagen2{
+    grid-area: imagen2;
+    width: 40rem;
+    height: 25rem;
+    border-radius: 10px;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imagen3{
+    grid-area: imagen3;
+    width: 40rem;
+    height: 25rem;
+    border-radius: 10px;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.footer ul{
+    padding: 1.5rem;
+}
+.footer p{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.apeximg1{
+    background-image: url(../imagenes/mad_maggie.jpg);
+    background-size: contain;
+    background-repeat: round;
+}
+.apeximg2{
+    background-image: url(../imagenes/bloodhount.jpg);
+    background-size: cover;
+}
+.apeximg3{
+    background-image: url(../imagenes/octane.jpg);
+    background-size: cover;
+}
+.imgTituloApex{
+    background-image: url(../imagenes/pathfinder-waving-recortada.jpg);
+    background-size: cover;
+}
+/* --------------------------------------------------LOL---------------------------------------------------------------------- */
+.lolImg1{
+    background-image: url(../imagenes/LOL_pacth12.6.jpg);
+    background-size: cover;
+}
+.lolImg2{
+    background-image: url(../imagenes/LOL_patch12.5jpg.jpg);
+    background-size: cover;
+}
+.lolImg3{
+    background-image: url(../imagenes/LOL_patch12.4.jpg);
+    background-size: cover;
+}
+.imgTituloLeague{
+    background-image: url(../imagenes/Vayne_titulo.jpg);
+    background-size: cover;
+    background-position-y: -17rem;
+}
+/* -----------------------------------------------------NOSOTROS----------------------------------------------------------- */
+/* .nosotrosGrid{
+    display: grid;
+    grid-template-columns: 0.5fr 2.1fr 0.4fr; 
+    grid-template-rows: 0.8fr 2.4fr 0.4fr; 
+    gap: 10px 0px; 
+    grid-template-areas: 
+        "header header header"
+        "aside nosotros ."
+        "footer footer footer"
+    ; 
+} */
+.nosotrosFlex{
+    display: flex;
+    flex-flow: column wrap;
+}
+/* .headerNosotros{
+    grid-area: header;
+}
+.footerNosotros{
+    grid-area: footer;
+} */
+.mainNosotros{
+    margin: 0.5rem 25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    /* grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 1rem 1rem; 
+    grid-template-areas: 
+    "imgGrid1 dataGrid1 dataGrid1"
+    "imgGrid1 . imgGrid2"
+    "dataGrid2 dataGrid2 imgGrid2";  */
+
+    /* grid-area: nosotros; */
+}
+/* .asideNosotros{
+    grid-area: aside;
+} */
+.imgFlex1{
+    grid-area: imgGrid1;
+    width: 70rem;
+    height: 60rem;
+    border-radius: 3rem;
+    padding: 0.1rem;
+}
+.imgFlex2{
+    grid-area: imgGrid2;
+    width: 70rem;
+    height: 60rem;
+    border-radius: 3rem;
+    padding: 0.1rem;
+}
+.dataFlex1{
+    grid-area: dataGrid1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.dataFlex2{
+    grid-area: dataGrid2;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+}
+.mainNosotros div{
+    background-color: antiquewhite;
+    border-radius: 3rem;
+    color: #11131a;
+    margin: 10rem;
+}
+.mainNosotros h2{
+    padding: 2rem;
+}
+.footerNosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+/* -----------------------------------------------------CONTACTO------------------------------------------------------------- */
+.formulario{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 8rem auto;
+    background-color: rgb(250, 235, 215);
+    align-items: center;
+    width: 90rem;
+    height: 90rem;
+    border-radius: 2.5rem;
+}
+.formulario h2{
+    color: rgb(0, 0, 0);
+    padding: 2rem;
+    font-weight: bolder;
+}
+.formulario label{
+    width: 90rem;
+    display: flex;
+    justify-content: center;
+}
+.formulario input{
+    width: 60rem;
+    height: 5rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: solid;
+    border-width: 0.1rem;
+}
+.formulario form{
+    margin: 0;
+    padding: 2.5rem;
+}
+.divForm{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 2rem;
+}
+.divForm h3{
+    color: black;
+}
+.divBoton{
+    display: flex;
+    flex-direction: row;
+}
+.divBoton label{
+    width: auto;
+}
+.divBoton input{
+    width: 35rem;
+    border: none;
+}
+.divForm textarea{
+    width: 50rem;
+    margin: 2.5rem;
+    text-align: center;
+    border: solid;
+    border-width: 0.1rem;
+    border-radius: 1.5rem;
+}
+.divBoton input:hover{
+    border: solid;
+    border-width: 0.1rem;
+    transition: 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------MEDIA QUERY TABLET---------------------------------------------------------------------------------- */
+@media screen and (max-width:768px) {
+    .imagenAnimada{
+         flex-direction: column;
+    } 
+    .aside{
+        display: none;
+    }
+    .notas1{
+        display: none;
+    }
+    .notas2{
+        display: none;
+    }
+    .notas3{
+        display: none;
+    }
+    .navegacion{
+        height: 20rem;
+        flex-flow: column nowrap;
+    }
+    .titulo{
+        background-position-x: -240px;
+    }
+    .imgTituloLeague{
+        background-position-x: 1px;
+        background-position-y: 1px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------MEDIA QUERY MOBILE-------------------------------------------------------------------------------- */
+@media screen and (max-width:480px) {
+    .navegacion{
+        flex-flow: row nowrap;
+    }
+    .titulo{
+        background-position-x: -498px;
+    }
+    .imgTituloLeague{
+        background-position-x: -10rem;
+        background-position-y: 1px;
+    }
+}
