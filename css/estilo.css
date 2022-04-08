@@ -326,7 +326,6 @@ body{
     grid-area: aside;
 } */
 .imgFlex1{
-    grid-area: imgGrid1;
     width: 70rem;
     height: 60rem;
     border-radius: 3rem;
@@ -334,20 +333,17 @@ body{
     /* git  */
 }
 .imgFlex2{
-    grid-area: imgGrid2;
     width: 70rem;
     height: 60rem;
     border-radius: 3rem;
     padding: 0.1rem;
 }
 .dataFlex1{
-    grid-area: dataGrid1;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 .dataFlex2{
-    grid-area: dataGrid2;
     display: flex;
     flex-flow: row-reverse nowrap;
     align-items: center;
@@ -360,6 +356,7 @@ body{
 }
 .mainNosotros h2{
     padding: 2rem;
+    text-align: center;
 }
 .footerNosotros{
     display: flex;
@@ -375,7 +372,7 @@ body{
     background-color: rgb(250, 235, 215);
     align-items: center;
     width: 90rem;
-    height: 90rem;
+    height: auto;
     border-radius: 2.5rem;
 }
 .formulario h2{
@@ -472,6 +469,14 @@ body{
 
 /* -----------------------------------------------------------MEDIA QUERY TABLET---------------------------------------------------------------------------------- */
 @media screen and (max-width:768px) {
+    /* .contenedorGrid{
+        grid-template-areas: 
+        "header"
+        "titulo"
+        "parche"
+        "footer"
+        ;
+    } */
     .imagenAnimada{
          flex-direction: column;
     } 
@@ -497,6 +502,48 @@ body{
     .imgTituloLeague{
         background-position-x: 1px;
         background-position-y: 1px;
+    }
+    .contenedorFlexBody{
+        width: auto;
+    }
+    .contenedorFlexBody div{
+        width: 76.8rem;
+    }
+    .contenedorFlexBody header{
+        width: 76.8rem;
+    }
+    .contenedorFlexBody footer{
+        width: 76.8rem;
+    }
+    .contenedorFlex{
+        margin: 2rem 0rem;
+    }
+    .formulario{
+        width: 76.8rem;
+    }
+    .nosotrosFlex{
+        width: auto;
+    }
+    .headerNosotros{
+        width: 76.8rem;
+    }
+    .mainNosotros{
+        width: 76.8rem;
+        margin: 4rem 0rem;
+    }
+    .mainNosotros div{
+        margin: 1rem 0rem; 
+    }
+    .dataFlex1{
+        flex-flow: column wrap;
+        align-content: center;
+    }
+    .dataFlex2{
+        flex-flow: column wrap;
+        align-content: center;
+    }
+    .footerNosotros{
+        width: 76.8rem;
     }
 }
 
@@ -525,5 +572,51 @@ body{
     .imgTituloLeague{
         background-position-x: -10rem;
         background-position-y: 1px;
+    }
+    .contenedorFlexBody div{
+        width: 42.5rem;
+    }
+    .contenedorFlexBody header{
+        width: 42.5rem;
+    }
+    .contenedorFlexBody footer{
+        width: 42.5rem;
+    }
+    .contenedorFlex{
+        margin: 2rem 0rem;
+    }
+    .formulario{
+        width: 42.5rem;
+        margin: 4rem 0rem;
+    }
+    .divBoton{
+        flex-flow: column wrap;
+    }
+    .divForm label{
+        width: 37rem;
+    }
+    .divForm input{
+        width: 35rem;
+    }
+    .divForm textarea{
+        width: 37rem;
+    }
+    .headerNosotros{
+        width: 42.5rem;
+    }
+    .mainNosotros{
+        width: 42.5rem;
+        margin: 1rem 0rem;
+    }
+    .footerNosotros{
+        width: 42.5rem;
+    }
+    .dataFlex1 img{
+        width: 37rem;
+        height: 35rem;
+    }
+    .dataFlex2 img{
+        width: 37rem;
+        height: 35rem;
     }
 }
