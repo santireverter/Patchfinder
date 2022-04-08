@@ -469,28 +469,24 @@ body{
 
 /* -----------------------------------------------------------MEDIA QUERY TABLET---------------------------------------------------------------------------------- */
 @media screen and (max-width:768px) {
-    /* .contenedorGrid{
+    .contenedorGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.8fr 2.3fr 0.5fr ;
         grid-template-areas: 
         "header"
         "titulo"
-        "parche"
+        "parches"
         "footer"
         ;
-    } */
+    }
     .imagenAnimada{
          flex-direction: column;
     } 
     .aside{
         display: none;
     }
-    .notas1{
-        display: none;
-    }
-    .notas2{
-        display: none;
-    }
-    .notas3{
-        display: none;
+    .header{
+        width: 76.8rem;
     }
     .navegacion{
         height: 20rem;
@@ -498,10 +494,18 @@ body{
     }
     .titulo{
         background-position-x: -240px;
+        width: 76.8rem;
     }
     .imgTituloLeague{
         background-position-x: 1px;
         background-position-y: 1px;
+        width: 76.8rem;
+    }
+    .parches{
+        width: 76.8rem;
+    }
+    .footer{
+        width: 76.8rem;
     }
     .contenedorFlexBody{
         width: auto;
@@ -545,6 +549,15 @@ body{
     .footerNosotros{
         width: 76.8rem;
     }
+    .notas1{
+        width: 32rem;
+    }
+    .notas2{
+        width: 32rem;
+    }
+    .notas3{
+        width: 32rem;
+    }
 }
 
 
@@ -566,12 +579,23 @@ body{
     .navegacion{
         flex-flow: row nowrap;
     }
+    .header{
+        width: 42.5rem;
+    }
     .titulo{
         background-position-x: -498px;
+        width: 42.5rem;
     }
     .imgTituloLeague{
         background-position-x: -10rem;
         background-position-y: 1px;
+        width: 42.5rem;
+    }
+    .parches{
+        width: 42.5rem;
+    }
+    .footer{
+        width: 42.5rem;
     }
     .contenedorFlexBody div{
         width: 42.5rem;
@@ -618,5 +642,14 @@ body{
     .dataFlex2 img{
         width: 37rem;
         height: 35rem;
+    }
+    .notas1{
+        display: none;
+    }
+    .notas2{
+        display: none;
+    }
+    .notas3{
+        display: none;
     }
 }
