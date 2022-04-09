@@ -575,7 +575,7 @@ body{
 
 
 /* ------------------------------------------------------------MEDIA QUERY MOBILE-------------------------------------------------------------------------------- */
-@media screen and (max-width:480px) {
+@media screen and (max-width:425px) {
     .navegacion{
         flex-flow: row nowrap;
     }
