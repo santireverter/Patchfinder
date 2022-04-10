@@ -13,6 +13,15 @@ body{
     font-size: 16px;
     color: antiquewhite;
 }
+/* -----------------------------------------------------animaciones--------------------------------------------------------- */
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
 /* -----------------------------------------------------------INDEX Y APEX---------------------------------------------------- */
 .navegacion{
     background-color: #4672fe;
@@ -94,6 +103,8 @@ body{
 .contenedorFlexBody{
     display: flex;
     flex-flow: column wrap;
+    animation: appear;
+    animation-duration: 1s;
 }
 .contenedorFlex{
     display: flex;
@@ -131,7 +142,8 @@ body{
     ;
     /* grid-gap: 10px; */
     align-items: center;
-
+    animation: appear;
+    animation-duration: 1s;
 }
 .header{
     grid-area: header;
@@ -301,6 +313,8 @@ body{
 .nosotrosFlex{
     display: flex;
     flex-flow: column wrap;
+    animation: appear;
+    animation-duration: 1s;
 }
 /* .headerNosotros{
     grid-area: header;
@@ -431,7 +445,7 @@ body{
     border-width: 0.1rem;
     transition: 0.2s;
 }
-/* -----------------------------------------------------animaciones--------------------------------------------------------- */
+
 
 
 
