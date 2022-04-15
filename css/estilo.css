@@ -20,31 +20,38 @@ html{
 body{
     background-color: #11131a;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 2rem;
     color: antiquewhite;
     text-align: center;
     animation: appear;
     animation-duration: 1s;
 }
 .navegacion{
-    background-color: #4672fe;
+    /* background-color: #4672fe; */
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    height: 15rem;
+    /* height: 15rem; */
 }
 .navegacion a{
     text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: bold;
 }
 .logo{
     width: 10rem;
     height: 10rem;
     margin: 0.5rem;
 }
+.nombreLogo{
+    color: antiquewhite;
+}
+.menu{
+    align-items: center;
+}
 .menu li{
-    display: inline-block;
-    position: relative;
     padding: 1rem;
     font-size: large;
     font-weight: bold;
@@ -52,10 +59,13 @@ body{
 }
 .menu li a{
     text-decoration: none;
-    color: white;
-
+    color: rgb(255, 255, 255);
 }
-.submenu{
+.menu li a:hover{
+    filter: opacity(50%);
+    transition: 0.25s;
+}
+/* .submenu{
     display: none;
     position: absolute;
 }
@@ -68,7 +78,7 @@ body{
 }
 .menu li:hover .submenu{
     display: block;
-}
+} */
 .bienvenida{
     background-image: url(../imagenes/pathfinder-waving-recortada.jpg);
     background-size: cover;
@@ -515,8 +525,9 @@ body{
         width: 76.8rem;
     }
     .navegacion{
-        height: 20rem;
-        flex-flow: column nowrap;
+        /* height: 20rem; */
+        flex-flow: row wrap; 
+        /* antes estaba column nowrap */
     }
     .titulo{
         background-position-x: -240px;
@@ -612,7 +623,8 @@ body{
 /* ------------------------------------------------------------MEDIA QUERY MOBILE-------------------------------------------------------------------------------- */
 @media screen and (max-width:425px) {
     .navegacion{
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
+        /* antes estaba row nowrap */
     }
     .header{
         width: 42.5rem;
