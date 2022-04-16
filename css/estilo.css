@@ -522,7 +522,7 @@ body{
         display: none;
     }
     .header{
-        width: 76.8rem;
+        width: 100%;
     }
     .navegacion{
         /* height: 20rem; */
@@ -531,45 +531,45 @@ body{
     }
     .titulo{
         background-position-x: -240px;
-        width: 76.8rem;
+        width: 100%;
     }
     .imgTituloLeague{
         background-position-x: 1px;
         background-position-y: 1px;
-        width: 76.8rem;
+        width: 100%;
     }
     .parches{
-        width: 76.8rem;
+        width: 100%;
     }
     .footer{
-        width: 76.8rem;
+        width: 100%;
     }
     .contenedorFlexBody{
         width: auto;
     }
     .contenedorFlexBody div{
-        width: 76.8rem;
+        width: 100%;
     }
     .contenedorFlexBody header{
-        width: 76.8rem;
+        width: 100%;
     }
     .contenedorFlexBody footer{
-        width: 76.8rem;
+        width: 100%;
     }
     .contenedorFlex{
         margin: 2rem 0rem;
     }
     .formulario{
-        width: 76.8rem;
+        width: 100%;
     }
     .nosotrosFlex{
         width: auto;
     }
     .headerNosotros{
-        width: 76.8rem;
+        width: 100%;
     }
     .mainNosotros{
-        width: 76.8rem;
+        width: 100%;
         margin: 4rem 0rem;
     }
     .mainNosotros div{
@@ -584,7 +584,7 @@ body{
         align-content: center;
     }
     .footerNosotros{
-        width: 76.8rem;
+        width: 100%;
     }
     .notas1{
         width: 32rem;
@@ -627,40 +627,41 @@ body{
         /* antes estaba row nowrap */
     }
     .header{
-        width: 42.5rem;
+        width: 100%;
     }
     .titulo{
         background-position-x: -498px;
-        width: 42.5rem;
+        width: 100%;
     }
     .imgTituloLeague{
         background-position-x: -10rem;
         background-position-y: 1px;
-        width: 42.5rem;
+        width: 100%;
     }
     .parches{
-        width: 42.5rem;
+        width: 100%;
     }
     .parches p{
         margin: 1rem;
     }
     .footer{
-        width: 42.5rem;
+        width: 100%;
     }
     .contenedorFlexBody div{
-        width: 42.5rem;
+        width: 100%;
+        justify-content: center;
     }
     .contenedorFlexBody header{
-        width: 42.5rem;
+        width: 100%;
     }
     .contenedorFlexBody footer{
-        width: 42.5rem;
+        width: 100%;
     }
     .contenedorFlex{
         margin: 2rem 0rem;
     }
     .formulario{
-        width: 42.5rem;
+        width: 100%;
         margin: 4rem 0rem;
     }
     .divBoton{
@@ -676,14 +677,14 @@ body{
         width: 37rem;
     }
     .headerNosotros{
-        width: 42.5rem;
+        width: 100%;
     }
     .mainNosotros{
-        width: 42.5rem;
+        width: 100%;
         margin: 1rem 0rem;
     }
     .footerNosotros{
-        width: 42.5rem;
+        width: 100%;
     }
     .dataFlex1 img{
         width: 37rem;
