@@ -428,6 +428,9 @@ body{
     align-items: center;
     margin: 2rem;
 }
+.divForm label{
+    width: 100%;
+}
 .divForm h3{
     color: black;
 }
@@ -436,7 +439,7 @@ body{
     flex-direction: row;
 }
 .divBoton label{
-    width: auto;
+    width: 100%;
 }
 .divBoton input{
     width: 35rem;
@@ -611,6 +614,12 @@ body{
     .imagen3{
         background-position-y: 0rem;
     }
+    .divBoton{
+        align-items: center;
+    }
+    .divBoton label{
+        width: 100%;
+    }
 }
 
 
@@ -675,13 +684,13 @@ body{
         flex-flow: column wrap;
     }
     .divForm label{
-        width: 37rem;
+        width: 100%;
     }
     .divForm input{
-        width: 35rem;
+        width: 100%;
     }
     .divForm textarea{
-        width: 37rem;
+        width: 100%;
     }
     .headerNosotros{
         width: 100%;
