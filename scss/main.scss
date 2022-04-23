@@ -1,3 +1,22 @@
+*{
+	border:0;
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+}
+html{
+    font-size: 10px;
+}
+/* -----------------------------------------------------animaciones--------------------------------------------------------- */
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+/* -----------------------------------------------------------INDEX Y APEX---------------------------------------------------- */
 body{
     background-color: #11131a;
     font-family: 'Open Sans', sans-serif;
@@ -375,7 +394,20 @@ $auto: 100%;
         transition: 0.2s;
     }
 }
-
+/* ------------------------------------------------------------MEDIA QUERY 1024PX------------------------------------------------------------------------------------ */
+@media screen and (max-width:1024px){
+    .imagen1 {
+        background-position-y: 0rem;
+    }
+    
+    .imagen2 {
+        background-position-y: 0rem;
+    }
+    
+    .imagen3 {
+        background-position-y: 0rem;
+    }
+    }
 /* -----------------------------------------------------------MEDIA QUERY TABLET---------------------------------------------------------------------------------- */
 @media screen and (max-width:768px) {
     .imagenAnimada{
