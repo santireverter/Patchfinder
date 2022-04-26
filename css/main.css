@@ -19,7 +19,7 @@ body {
   background-color: #11131a;
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
-  color: antiquewhite;
+  color: white;
   text-align: center;
   animation: appear;
   animation-duration: 1s; }
@@ -43,7 +43,7 @@ body {
   margin: 0.5rem; }
 
 .nombreLogo {
-  color: antiquewhite; }
+  color: white; }
 
 .menu {
   align-items: center; }
@@ -52,12 +52,12 @@ body {
     font-size: large;
     font-weight: bold;
     margin: 0px 1rem; }
-  .menu li a {
-    text-decoration: none;
-    color: white; }
-  .menu li a:hover {
-    filter: opacity(50%);
-    transition: 0.25s; }
+    .menu li a {
+      text-decoration: none;
+      color: white; }
+      .menu li a:hover {
+        filter: opacity(50%);
+        transition: 0.25s; }
 
 .bienvenida {
   background-image: url(../imagenes/pathfinder-waving-recortada.jpg);
@@ -69,10 +69,9 @@ body {
   height: 3.5rem;
   width: 3.5rem;
   filter: grayscale(100%); }
-
-.redes img:hover {
-  filter: grayscale(0%);
-  transition: 1s; }
+  .redes img:hover {
+    filter: grayscale(0%);
+    transition: 1s; }
 
 .redes li {
   display: inline; }
@@ -81,11 +80,11 @@ body {
   text-decoration: none; }
 
 .al-inicio {
-  color: antiquewhite;
+  color: white;
   text-decoration: none; }
 
 .textoInterior {
-  color: antiquewhite;
+  color: white;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.582);
   padding: 1.5rem;
@@ -110,11 +109,11 @@ body {
   .imagenAnimada img {
     width: 72rem;
     height: 40rem; }
-  .imagenAnimada img:hover {
-    width: 79.2rem;
-    height: 45rem;
-    filter: grayscale(70%);
-    transition: all 1s; }
+    .imagenAnimada img:hover {
+      width: 79.2rem;
+      height: 45rem;
+      filter: grayscale(70%);
+      transition: all 1s; }
 
 /*--------------------------------------------- GRID CODE------------------------------------------------------------*/
 .header {
@@ -136,14 +135,14 @@ body {
 
 .navInterno a {
   text-decoration: none;
-  color: antiquewhite; }
+  color: white; }
 
 .navInterno li {
   padding: 1.5rem;
   margin: 2rem 0px; }
 
 .parches a {
-  color: antiquewhite;
+  color: white;
   text-decoration: none;
   padding: 1rem;
   border-radius: 20px; }
@@ -280,13 +279,13 @@ body {
   height: 60rem;
   border-radius: 3rem;
   padding: 0.1rem;
-  width: 75rem; }
+  width: 72rem; }
 
 .imgFlex2 {
   height: 60rem;
   border-radius: 3rem;
   padding: 0.1rem;
-  width: 75rem; }
+  width: 72rem; }
 
 .dataFlex1 {
   display: flex;
@@ -359,10 +358,10 @@ body {
   .divBoton input {
     width: 35rem;
     border: none; }
-  .divBoton input:hover {
-    border: solid;
-    border-width: 0.1rem;
-    transition: 0.2s; }
+    .divBoton input:hover {
+      border: solid;
+      border-width: 0.1rem;
+      transition: 0.2s; }
 
 /* ------------------------------------------------------------MEDIA QUERY 1024PX------------------------------------------------------------------------------------ */
 @media screen and (max-width: 1024px) {
@@ -442,8 +441,8 @@ body {
     background-position-y: 0rem; }
   .divBoton {
     align-items: center; }
-  .divBoton label {
-    width: 100%; } }
+    .divBoton label {
+      width: 100%; } }
 
 /* ------------------------------------------------------------MEDIA QUERY MOBILE-------------------------------------------------------------------------------- */
 @media screen and (max-width: 425px) {
