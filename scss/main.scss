@@ -117,11 +117,11 @@ $auto: 100%;
 .imagenAnimada{
     display: flex;
     img{
-        width: auto;
+        width: 72rem;
         height: 40rem;
     }
     img:hover{
-        width: $auto * 1.1;
+        width: 72rem * 1.1;
         height: 45rem;
         filter: grayscale(70%);
         transition: all 1s;

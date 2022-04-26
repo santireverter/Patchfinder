@@ -108,10 +108,10 @@ body {
 .imagenAnimada {
   display: flex; }
   .imagenAnimada img {
-    width: auto;
+    width: 72rem;
     height: 40rem; }
   .imagenAnimada img:hover {
-    width: 110%;
+    width: 79.2rem;
     height: 45rem;
     filter: grayscale(70%);
     transition: all 1s; }
