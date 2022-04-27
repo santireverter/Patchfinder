@@ -124,7 +124,7 @@ body {
   .selectorLol h3, .selectorApex h3 {
     filter: opacity(0); }
     .selectorLol h3:hover, .selectorApex h3:hover {
-      filter: opacity(100);
+      filter: opacity(1);
       transition: 1s; }
   .selectorLol a, .selectorApex a {
     text-decoration: none;
@@ -354,6 +354,8 @@ body {
 @media screen and (max-width: 768px) {
   .imagenAnimada {
     flex-direction: column; }
+    .imagenAnimada h3 {
+      filter: opacity(1); }
   .aside {
     display: none; }
   .header {
