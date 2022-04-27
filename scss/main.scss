@@ -7,9 +7,22 @@
 html{
     font-size: 10px;
 }
-$lettercolor: rgb(255, 255, 255);
-$divsbackgroundcolor: rgb(250, 235, 215);
-$widthimg: 72rem;
+$estilo:(
+    mainBackgroundColor: rgb(17, 19, 26),
+    divsBackgroundColor: rgb(250, 235, 215),
+    letterColor: rgb(255, 255, 255),
+    widthImg: 72rem,
+    letterCenter: center,
+);
+@mixin size($height, $width) {
+    height: $height;
+    width: $width;
+}
+@mixin marginBorder($margin, $radius) {
+    border-radius: $radius;
+    margin: $margin;
+}
+
 /* -----------------------------------------------------animaciones--------------------------------------------------------- */
 @keyframes appear {
     0%{
@@ -21,14 +34,15 @@ $widthimg: 72rem;
 }
 /* -----------------------------------------------------------INDEX Y APEX---------------------------------------------------- */
 body{
-    background-color: #11131a;
+    background-color:map-get($estilo, mainBackgroundColor);
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
-    color: $lettercolor;
-    text-align: center;
+    color: map-get($estilo, letterColor);
+    text-align: map-get($estilo, letterCenter);
     animation: appear;
     animation-duration: 1s;
 }
+
 .navegacion{
     /* background-color: #4672fe; */
     display: flex;
@@ -38,18 +52,17 @@ body{
     /* height: 15rem; */
     a{
         text-decoration: none;
-        color: $lettercolor;
+        color: map-get($estilo, letterColor);
         font-size: 2rem;
         font-weight: bold;
     }
 }
 .logo{
-    width: 10rem;
-    height: 10rem;
+    @include size(10rem, 10rem);
     margin: 0.5rem;
 }
 .nombreLogo{
-    color: $lettercolor;
+    color: map-get($estilo, letterColor);
 }
 .menu{
     align-items: center;
@@ -60,7 +73,7 @@ body{
         margin: 0px 1rem;
         a{
             text-decoration: none;
-            color: $lettercolor;
+            color: map-get($estilo, letterColor);
             &:hover{
                 filter: opacity(50%);
                 transition: 0.25s;
@@ -71,13 +84,11 @@ body{
 .bienvenida{
     background-image: url(../imagenes/pathfinder-waving-recortada.jpg);
     background-size: cover;
-    height: 50rem;
-    width: 108rem;
+    @include size(50rem, 108rem)
 }
 .redes{
     img{
-    height: 3.5rem;
-    width: 3.5rem;
+    @include size(3.5rem, 3.5rem);
     filter: grayscale(100%);
     &:hover{
         filter: grayscale(0%);
@@ -92,11 +103,11 @@ body{
     }
 }
 .al-inicio{
-    color: $lettercolor;
+    color: map-get($estilo, letterColor);
     text-decoration: none;
 }
 .textoInterior{
-    color: $lettercolor;
+    color: map-get($estilo, letterColor);
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.582);
     padding: 1.5rem;
@@ -117,26 +128,42 @@ body{
         justify-content: center;
     }
 }
-$auto: 100%;
 .imagenAnimada{
     display: flex;
-    img{
-        width: $widthimg;
-        height: 40rem;
+    div{
         &:hover{
-            width: $widthimg * 1.1;
-        height: 45rem;
-        filter: grayscale(70%);
-        transition: all 1s;
+            width: map-get($estilo, widthImg) * 1.1;
+                height: 45rem;
+                filter: grayscale(70%);
+                transition: all 1s;
         }
     }
 }
-/*--------------------------------------------- GRID CODE------------------------------------------------------------*/
-.header{
-    grid-area: header;
+.selectorLol{
+    display: flex;
+    align-items: center;
+    background-image: url(../imagenes/yassuo_lol.jpg);
+    background-size: cover;
+    @include size(40rem, map-get($estilo, widthImg));
+    @include marginBorder(1rem, 3rem);
+    h3{
+        filter: opacity(0);
+        &:hover{
+            filter: opacity(100);
+            transition: 1s;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: map-get($estilo, letterColor);
+    }
 }
+.selectorApex{
+    @extend .selectorLol;
+    background-image: url(../imagenes/Apex_legends.jpg);
+}
+/*--------------------------------------------- GRID CODE------------------------------------------------------------*/
 .titulo{
-    grid-area: titulo;
     background-image: url(../imagenes/pathfinder-waving-recortada.jpg);
     background-size: cover;
     height: 39rem;
@@ -145,14 +172,13 @@ $auto: 100%;
     justify-content: center;
 }
 .aside{
-    grid-area: aside;
     display: flex;
     justify-content: center;
 }
 .navInterno{
     a{
         text-decoration: none;
-        color: $lettercolor;
+        color: map-get($estilo, letterColor);
     }
     li{
         padding: 1.5rem;
@@ -161,7 +187,7 @@ $auto: 100%;
 }
 .parches{
     a{
-        color: $lettercolor;
+        color: map-get($estilo, letterColor);
         text-decoration: none;
         padding: 1rem;
         border-radius: 20px;
@@ -171,28 +197,18 @@ $auto: 100%;
     }
 }
 .notas1{
-    grid-area: notas1;
     padding: 3rem;
     height: 30rem;
     display: flex;
     align-items: center;
 }
 .notas2{
-    grid-area: notas2;
-    padding: 3rem;
-    height: 30rem;
-    display: flex;
-    align-items: center;
+    @extend .notas1;
 }
 .notas3{
-    grid-area: notas3;
-    padding: 3rem;
-    height: 30rem;
-    display: flex;
-    align-items: center;
+    @extend .notas1;
 }
 .imagen1{
-    grid-area: imagen1;
     height: 25rem;
     border-radius: 10px;
     margin: 1.5rem 0rem;
@@ -200,33 +216,18 @@ $auto: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-position-y: -14rem;
-    
+    background-position-y: -14rem; 
 }
 .imagen2{
-    grid-area: imagen2;
-    height: 25rem;
-    border-radius: 10px;
-    margin: 1.5rem 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @extend .imagen1;
     background-position-y: -9rem;
 }
 .imagen3{
-    grid-area: imagen3;
-    height: 25rem;
-    border-radius: 10px;
-    margin: 1.5rem 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @extend .imagen1;
     background-position-y: -15rem;
 }
 .footer{
-    grid-area: footer;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,7 +237,7 @@ $auto: 100%;
     }
     p{
         font-weight: bold;
-        color: $lettercolor;
+        color: map-get($estilo, letterColor);
     }
 }
 .apeximg1{
@@ -245,16 +246,16 @@ $auto: 100%;
     background-position-y: -5.5rem;
 }
 .apeximg2{
+    @extend .apeximg1;
     background-image: url(../imagenes/bloodhount.jpg);
-    background-size: cover;
-    background-position-y: -5.5rem;
 }
 .apeximg3{
+    @extend .apeximg1;
     background-image: url(../imagenes/octane.jpg);
-    background-size: cover;
     background-position-y: -3.5rem;
 }
 .imgTituloApex{
+    @extend .titulo;
     background-image: url(../imagenes/pathfinder-waving-recortada.jpg);
     background-size: cover;
 }
@@ -264,14 +265,15 @@ $auto: 100%;
     background-size: cover;
 }
 .lolImg2{
+    @extend .lolImg1;
     background-image: url(../imagenes/LOL_patch12.5jpg.jpg);
-    background-size: cover;
 }
 .lolImg3{
+    @extend .lolImg1;
     background-image: url(../imagenes/LOL_patch12.4.jpg);
-    background-size: cover;
 }
 .imgTituloLeague{
+    @extend .titulo;
     background-image: url(../imagenes/Vayne_titulo.jpg);
     background-size: cover;
     background-position-y: -17rem;
@@ -288,7 +290,7 @@ $auto: 100%;
     display: flex;
     flex-flow: column nowrap;
     div{
-        background-color: $divsbackgroundcolor;
+        background-color: map-get($estilo, divsBackgroundColor);
         border-radius: 3rem;
         color: #11131a;
         margin: 10rem;
@@ -301,16 +303,14 @@ $auto: 100%;
     }
 }
 .imgFlex1{
-    height: 60rem;
+    @include size(43rem, map-get($estilo, widthImg));
     border-radius: 3rem;
     padding: 0.1rem;
-    width: $widthimg;
 }
 .imgFlex2{
-    height: 60rem;
     border-radius: 3rem;
     padding: 0.1rem;
-    width: $widthimg;
+    @include size(43rem, map-get($estilo, widthImg));
 }
 .dataFlex1{
     display: flex;
@@ -318,9 +318,8 @@ $auto: 100%;
     align-items: center;
 }
 .dataFlex2{
-    display: flex;
+    @extend .dataFlex1;
     flex-flow: row-reverse nowrap;
-    align-items: center;
 }
 .footerNosotros{
     display: flex;
@@ -330,14 +329,14 @@ $auto: 100%;
 }
 /* -----------------------------------------------------CONTACTO------------------------------------------------------------- */
 .formulario{
+    @include size(auto, 90rem);
     display: flex;
     flex-flow: column nowrap;
     margin: 8rem auto;
-    background-color: $divsbackgroundcolor;
+    background-color: map-get($estilo, divsBackgroundColor);
     align-items: center;
-    width: 90rem;
-    height: auto;
     border-radius: 2.5rem;
+    text-align: map-get($estilo, letterCenter);
     h2{
         color: rgb(0, 0, 0);
         padding: 2rem;
@@ -349,8 +348,7 @@ $auto: 100%;
         justify-content: center;
     }
     input{
-        width: 60rem;
-        height: 5rem;
+        @include size(5rem, 60rem);
         margin: 2rem;
         border-radius: 1rem;
         text-align: center;
@@ -376,7 +374,7 @@ $auto: 100%;
     textarea{
         width: 50rem;
         margin: 2.5rem;
-        text-align: center;
+        text-align: map-get($estilo, letterCenter);
         border: solid;
         border-width: 0.1rem;
         border-radius: 1.5rem;
@@ -388,9 +386,12 @@ $auto: 100%;
     label{
         width: 100%;
     }
-    input{
-        width: 35rem;
+    button{
+        @include size(5rem, 35rem);
         border: none;
+        border-radius: 1.5rem;
+        background-color: rgb(255, 255, 255);
+        margin: 2rem ;
         &:hover{
             border: solid;
             border-width: 0.1rem;
