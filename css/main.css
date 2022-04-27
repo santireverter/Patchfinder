@@ -391,9 +391,8 @@ body {
   .formulario {
     width: 100%; }
   .nosotrosFlex {
-    width: auto; }
-  .headerNosotros {
-    width: 100%; }
+    width: 100%;
+    padding: 0rem; }
   .mainNosotros {
     width: 100%;
     margin: 4rem 0rem; }
@@ -422,7 +421,13 @@ body {
   .divBoton {
     align-items: center; }
     .divBoton label {
-      width: 100%; } }
+      width: 100%; }
+  .selectorLol, .selectorApex {
+    background-position-x: -14rem;
+    margin: 0rem; }
+  .selectorApex {
+    background-position-x: -2rem;
+    margin: 0rem; } }
 
 /* ------------------------------------------------------------MEDIA QUERY MOBILE-------------------------------------------------------------------------------- */
 @media screen and (max-width: 425px) {
@@ -462,8 +467,6 @@ body {
   .divForm input {
     width: 100%; }
   .divForm textarea {
-    width: 100%; }
-  .headerNosotros {
     width: 100%; }
   .mainNosotros {
     width: 100%;

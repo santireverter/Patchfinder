@@ -469,11 +469,12 @@ body{
         width: 100%;
     }
     .nosotrosFlex{
-        width: auto;
-    }
-    .headerNosotros{
         width: 100%;
+        padding: 0rem;
     }
+    // .headerNosotros{
+    //     width: 100%;
+    // }
     .mainNosotros{
         width: 100%;
         margin: 4rem 0rem;
@@ -515,6 +516,14 @@ body{
         label{
             width: 100%;
         }
+    }
+    .selectorLol{
+        background-position-x: -14rem;
+        margin: 0rem;
+    }
+    .selectorApex{
+        background-position-x: -2rem;
+        margin: 0rem;
     }
 }
 
@@ -591,9 +600,9 @@ body{
             width: 100%;
         }
     }
-    .headerNosotros{
-        width: 100%;
-    }
+    // .headerNosotros{
+    //     width: 100%;
+    // }
     .mainNosotros{
         width: 100%;
         margin: 1rem 0rem;
