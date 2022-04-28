@@ -132,10 +132,9 @@ body{
     display: flex;
     div{
         &:hover{
-            width: map-get($estilo, widthImg) * 1.1;
-                height: 45rem;
-                filter: grayscale(70%);
-                transition: all 1s;
+            transform: scale(1.1);
+            filter: grayscale(70%);
+            transition: all 1.2s;
         }
     }
 }
@@ -147,8 +146,10 @@ body{
     @include size(40rem, map-get($estilo, widthImg));
     @include marginBorder(1rem, 3rem);
     h3{
+        transform: scale(1.5);
         filter: opacity(0);
         &:hover{
+            transform: scale(1.8);
             filter: opacity(1);
             transition: 1s;
         }

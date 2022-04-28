@@ -107,10 +107,9 @@ body {
 .imagenAnimada {
   display: flex; }
   .imagenAnimada div:hover {
-    width: 79.2rem;
-    height: 45rem;
+    transform: scale(1.1);
     filter: grayscale(70%);
-    transition: all 1s; }
+    transition: all 1.2s; }
 
 .selectorLol, .selectorApex {
   display: flex;
@@ -122,8 +121,10 @@ body {
   border-radius: 3rem;
   margin: 1rem; }
   .selectorLol h3, .selectorApex h3 {
+    transform: scale(1.5);
     filter: opacity(0); }
     .selectorLol h3:hover, .selectorApex h3:hover {
+      transform: scale(1.8);
       filter: opacity(1);
       transition: 1s; }
   .selectorLol a, .selectorApex a {
