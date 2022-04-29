@@ -639,5 +639,11 @@ body{
     }
 }
 
-
+/*------------------------------------------------------------Media Query Mobile Small--------------------------------------------------------------*/ 
+@media screen and (max-width: 330px) {
+    .dataFlex1 img{
+        width: 31rem;
+        height: 35rem;
+    }
+}
 
