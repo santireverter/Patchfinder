@@ -589,6 +589,11 @@ body{
     }
     .divBoton{
         flex-flow: column wrap;
+        align-content: center;
+        align-items: center;
+        button{
+            width: 32rem;
+        }
     }
     .divForm{
         label{
