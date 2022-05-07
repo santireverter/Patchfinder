@@ -25,12 +25,9 @@ body {
   animation-duration: 1s; }
 
 .navegacion {
-  /* background-color: #4672fe; */
   display: flex;
   flex-flow: row nowrap;
-  /* justify-content: center; */
-  align-items: center;
-  /* height: 15rem; */ }
+  align-items: center; }
   .navegacion a {
     text-decoration: none;
     color: white;
@@ -91,6 +88,10 @@ body {
   border-radius: 2rem;
   filter: none; }
 
+.linkAzul:hover {
+  color: #3260f8;
+  transition: 0.3s; }
+
 /*----------------------------------------------- FLEX CODE --------------------------------------------------------------*/
 .contenedorFlexBody {
   display: flex;
@@ -107,7 +108,7 @@ body {
 .imagenAnimada {
   display: flex; }
   .imagenAnimada div:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     filter: grayscale(70%);
     transition: all 1.2s; }
 
@@ -116,10 +117,11 @@ body {
   align-items: center;
   background-image: url(../imagenes/yassuo_lol.jpg);
   background-size: cover;
+  background-position-x: -4rem;
   height: 40rem;
-  width: 72rem;
+  width: 62rem;
   border-radius: 3rem;
-  margin: 1rem; }
+  margin: 3rem; }
   .selectorLol h3, .selectorApex h3 {
     transform: scale(1.5);
     filter: opacity(0); }
@@ -132,7 +134,8 @@ body {
     color: white; }
 
 .selectorApex {
-  background-image: url(../imagenes/Apex_legends.jpg); }
+  background-image: url(../imagenes/Apex_legends.jpg);
+  background-position-x: -2rem; }
 
 /*--------------------------------------------- GRID CODE------------------------------------------------------------*/
 .titulo, .imgTituloApex, .imgTituloLeague {
@@ -247,7 +250,7 @@ body {
 
 .imgFlex1 {
   height: 43rem;
-  width: 72rem;
+  width: 62rem;
   border-radius: 3rem;
   padding: 0.1rem; }
 
@@ -255,7 +258,7 @@ body {
   border-radius: 3rem;
   padding: 0.1rem;
   height: 43rem;
-  width: 72rem; }
+  width: 62rem; }
 
 .dataFlex1, .dataFlex2 {
   display: flex;
@@ -312,7 +315,7 @@ body {
   .divForm h3 {
     color: black; }
   .divForm textarea {
-    width: 50rem;
+    width: 60rem;
     margin: 2.5rem;
     text-align: center;
     border: solid;
@@ -335,6 +338,12 @@ body {
       border: solid;
       border-width: 0.1rem;
       transition: 0.2s; }
+
+.inputEscondido {
+  display: none; }
+
+.inputVisible {
+  display: inline-block; }
 
 /* ------------------------------------------------------------MEDIA QUERY 1024PX------------------------------------------------------------------------------------ */
 @media screen and (max-width: 1024px) {
@@ -499,4 +508,8 @@ body {
 @media screen and (max-width: 330px) {
   .dataFlex1 img, .dataFlex2 img {
     width: 31rem;
-    height: 35rem; } }
+    height: 35rem; }
+  .inputEscondido {
+    display: inline-block; }
+  .inputVisible {
+    display: none; } }

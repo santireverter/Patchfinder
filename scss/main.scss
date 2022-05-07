@@ -11,7 +11,7 @@ $estilo:(
     mainBackgroundColor: rgb(17, 19, 26),
     divsBackgroundColor: rgb(250, 235, 215),
     letterColor: rgb(255, 255, 255),
-    widthImg: 72rem,
+    widthImg: 62rem,
     letterCenter: center,
 );
 @mixin size($height, $width) {
@@ -44,12 +44,9 @@ body{
 }
 
 .navegacion{
-    /* background-color: #4672fe; */
     display: flex;
     flex-flow: row nowrap;
-    /* justify-content: center; */
     align-items: center;
-    /* height: 15rem; */
     a{
         text-decoration: none;
         color: map-get($estilo, letterColor);
@@ -114,6 +111,12 @@ body{
     border-radius: 2rem;
     filter: none;
 }
+.linkAzul{
+    &:hover{
+        color: #3260f8;
+        transition: 0.3s;
+    }
+}
 /*----------------------------------------------- FLEX CODE --------------------------------------------------------------*/
 .contenedorFlexBody{
     display: flex;
@@ -132,7 +135,7 @@ body{
     display: flex;
     div{
         &:hover{
-            transform: scale(1.1);
+            transform: scale(1.2);
             filter: grayscale(70%);
             transition: all 1.2s;
         }
@@ -143,8 +146,9 @@ body{
     align-items: center;
     background-image: url(../imagenes/yassuo_lol.jpg);
     background-size: cover;
+    background-position-x: -4rem;
     @include size(40rem, map-get($estilo, widthImg));
-    @include marginBorder(1rem, 3rem);
+    @include marginBorder(3rem, 3rem);
     h3{
         transform: scale(1.5);
         filter: opacity(0);
@@ -162,6 +166,7 @@ body{
 .selectorApex{
     @extend .selectorLol;
     background-image: url(../imagenes/Apex_legends.jpg);
+    background-position-x: -2rem;
 }
 /*--------------------------------------------- GRID CODE------------------------------------------------------------*/
 .titulo{
@@ -279,12 +284,6 @@ body{
     background-position-y: -17rem;
 }
 /* -----------------------------------------------------NOSOTROS----------------------------------------------------------- */
-// .nosotrosFlex{
-//     display: flex;
-//     flex-flow: column wrap;
-//     animation: appear;
-//     animation-duration: 1s;
-// }
 .mainNosotros{
     margin: 0.5rem 25rem;
     display: flex;
@@ -372,7 +371,7 @@ body{
         color: black;
     }
     textarea{
-        width: 50rem;
+        width: 60rem;
         margin: 2.5rem;
         text-align: map-get($estilo, letterCenter);
         border: solid;
@@ -398,6 +397,12 @@ body{
             transition: 0.2s;
         }
     }
+}
+.inputEscondido{
+    display: none;
+}
+.inputVisible{
+    display: inline-block;
 }
 /* ------------------------------------------------------------MEDIA QUERY 1024PX------------------------------------------------------------------------------------ */
 @media screen and (max-width:1024px){
@@ -472,9 +477,6 @@ body{
         width: 100%;
         padding: 0rem;
     }
-    // .headerNosotros{
-    //     width: 100%;
-    // }
     .mainNosotros{
         width: 100%;
         margin: 4rem 0rem;
@@ -606,9 +608,6 @@ body{
             width: 100%;
         }
     }
-    // .headerNosotros{
-    //     width: 100%;
-    // }
     .mainNosotros{
         width: 100%;
         margin: 1rem 0rem;
@@ -649,6 +648,12 @@ body{
     .dataFlex1 img{
         width: 31rem;
         height: 35rem;
+    }
+    .inputEscondido{
+        display: inline-block;
+    }
+    .inputVisible{
+        display: none;
     }
 }
 
