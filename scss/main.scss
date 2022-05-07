@@ -288,6 +288,7 @@ body{
     margin: 0.5rem 25rem;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
     div{
         background-color: map-get($estilo, divsBackgroundColor);
         border-radius: 3rem;
@@ -526,11 +527,11 @@ body{
         }
     }
     .selectorLol{
-        background-position-x: -14rem;
+        background-position-x: 0rem;
         margin: 0rem;
     }
     .selectorApex{
-        background-position-x: -2rem;
+        background-position-x: 0rem;
         margin: 0rem;
     }
 }
@@ -645,6 +646,14 @@ body{
         height: auto;
         width: inherit;
         padding: 1rem;
+    }
+    .selectorLol{
+        background-position-x: -14rem;
+        margin: 0rem;
+    }
+    .selectorApex{
+        background-position-x: -1rem;
+        margin: 0rem;
     }
 }
 

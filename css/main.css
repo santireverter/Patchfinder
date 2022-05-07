@@ -236,7 +236,8 @@ body {
 .mainNosotros {
   margin: 0.5rem 25rem;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  align-items: center; }
   .mainNosotros div {
     background-color: antiquewhite;
     border-radius: 3rem;
@@ -432,10 +433,10 @@ body {
       border-width: 0.1rem;
       color: black; }
   .selectorLol, .selectorApex {
-    background-position-x: -14rem;
+    background-position-x: 0rem;
     margin: 0rem; }
   .selectorApex {
-    background-position-x: -2rem;
+    background-position-x: 0rem;
     margin: 0rem; } }
 
 /* ------------------------------------------------------------MEDIA QUERY MOBILE-------------------------------------------------------------------------------- */
@@ -506,7 +507,13 @@ body {
     justify-content: center;
     height: auto;
     width: inherit;
-    padding: 1rem; } }
+    padding: 1rem; }
+  .selectorLol, .selectorApex {
+    background-position-x: -14rem;
+    margin: 0rem; }
+  .selectorApex {
+    background-position-x: -1rem;
+    margin: 0rem; } }
 
 /*------------------------------------------------------------Media Query Mobile Small--------------------------------------------------------------*/
 @media screen and (max-width: 330px) {
