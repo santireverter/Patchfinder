@@ -427,6 +427,10 @@ body {
     align-items: center; }
     .divBoton label {
       width: 100%; }
+    .divBoton button {
+      border: solid;
+      border-width: 0.1rem;
+      color: black; }
   .selectorLol, .selectorApex {
     background-position-x: -14rem;
     margin: 0rem; }

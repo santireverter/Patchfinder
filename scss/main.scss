@@ -519,6 +519,11 @@ body{
         label{
             width: 100%;
         }
+        button{
+            border: solid;
+            border-width: 0.1rem;
+            color: rgb(0, 0, 0);
+        }
     }
     .selectorLol{
         background-position-x: -14rem;
